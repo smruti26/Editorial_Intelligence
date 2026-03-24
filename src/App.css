@@ -304,3 +304,122 @@
           .nl-hero-stats { gap: 16px; }
           .library, .newsletter-section, .playbook-hero-content, .playbook-body, .newsletter-hero-content, .nl-hero-subscribe, .nl-archive { padding-left: 16px; padding-right: 16px; }
         }
+
+        /* API FLow CSS */
+
+        /* ── AF PAGE WRAPPER ── */
+        .af-page { background:#f8f9fc; min-height:100vh; }
+
+        /* ── HERO BANNER ── */
+        .af-hero-wrap {
+          background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0c2a5e 100%);
+          position: relative; overflow: hidden;
+        }
+        .af-hero-wrap::before {
+          content:""; position:absolute; inset:0;
+          background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(99,102,241,0.25) 0%, transparent 65%),
+                      radial-gradient(ellipse 40% 50% at 10% 80%, rgba(37,99,235,0.2) 0%, transparent 60%);
+        }
+        .af-hero-inner { max-width:900px; margin:0 auto; padding:56px 32px 52px; position:relative; z-index:1; display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center; }
+        .af-hero-badge {
+          display:inline-flex; align-items:center; gap:6px;
+          background:rgba(99,102,241,0.25); color:#a5b4fc;
+          border:1px solid rgba(165,180,252,0.3); border-radius:20px;
+          padding:4px 12px; font-size:10px; font-weight:700; letter-spacing:.08em; margin-bottom:18px;
+        }
+        .af-hero-badge::before { content:"●"; font-size:7px; }
+        .af-hero-title { font-size:clamp(26px,3.5vw,40px); font-weight:800; line-height:1.1; margin-bottom:14px; color:#fff; }
+        .af-hero-title span { color:#818cf8; }
+        .af-hero-desc { font-size:13.5px; color:rgba(255,255,255,0.6); line-height:1.75; max-width:480px; margin-bottom:28px; }
+        .af-hero-stats { display:flex; gap:28px; }
+        .af-stat { display:flex; flex-direction:column; gap:2px; }
+        .af-stat-num { font-size:22px; font-weight:800; color:#fff; font-family:var(--mono); }
+        .af-stat-label { font-size:10px; color:rgba(255,255,255,0.45); letter-spacing:.06em; text-transform:uppercase; }
+
+        .af-hero-visual {
+          background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+          border-radius:16px; padding:20px; min-width:200px; display:flex; flex-direction:column; gap:10px;
+          backdrop-filter:blur(8px);
+        }
+        .af-vis-label { font-size:9px; font-weight:700; color:rgba(255,255,255,0.35); letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px; }
+        .af-vis-row { display:flex; align-items:center; gap:8px; padding:7px 10px; background:rgba(255,255,255,0.06); border-radius:8px; border:1px solid rgba(255,255,255,0.08); }
+        .af-vis-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+        .af-vis-text { font-size:11px; font-weight:600; color:rgba(255,255,255,0.8); flex:1; font-family:var(--mono); }
+        .af-vis-badge { font-size:9px; font-weight:700; padding:2px 7px; border-radius:4px; }
+
+        /* ── TOOLS STRIP ── */
+        .af-tools-strip { background:#fff; border-bottom:1px solid #e2e8f0; padding:14px 32px; }
+        .af-tools-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+        .af-tools-label { font-size:10px; font-weight:700; color:#94a3b8; letter-spacing:.08em; text-transform:uppercase; margin-right:4px; }
+        .af-tool-chip {
+          display:inline-flex; align-items:center; gap:5px;
+          background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px;
+          padding:4px 11px; font-size:11px; font-weight:700; color:#475569; font-family:var(--mono);
+          transition:all .15s;
+        }
+        .af-tool-chip:hover { background:#eff6ff; border-color:#bfdbfe; color:#2563eb; }
+
+        /* ── GRID LAYOUT ── */
+        .af-grid-wrap { max-width:900px; margin:0 auto; padding:40px 32px 80px; }
+        .af-grid-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; }
+        .af-grid-title { font-size:18px; font-weight:800; }
+        .af-grid-subtitle { font-size:12px; color:#94a3b8; margin-top:3px; }
+        .af-progress { display:flex; align-items:center; gap:8px; }
+        .af-progress-bar { width:120px; height:4px; background:#e2e8f0; border-radius:2px; overflow:hidden; }
+        .af-progress-fill { height:100%; background:linear-gradient(90deg,#2563eb,#7c3aed); border-radius:2px; width:100%; }
+        .af-progress-label { font-size:11px; font-weight:700; color:#94a3b8; font-family:var(--mono); }
+
+        .af-cards-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
+
+        .af-card {
+          background:#fff; border:1.5px solid #e2e8f0; border-radius:16px;
+          padding:20px; cursor:pointer; transition:all .22s ease;
+          position:relative; overflow:hidden; display:flex; flex-direction:column; gap:12px;
+        }
+        .af-card:hover {
+          transform:translateY(-4px);
+          box-shadow:0 16px 40px rgba(0,0,0,0.1), 0 0 0 1.5px var(--step-color);
+          border-color:var(--step-color);
+        }
+        .af-card-accent {
+          position:absolute; top:0; left:0; right:0; height:3px;
+          background:var(--step-color); opacity:0; transition:opacity .22s;
+          border-radius:16px 16px 0 0;
+        }
+        .af-card:hover .af-card-accent { opacity:1; }
+
+        .af-card-top { display:flex; align-items:flex-start; justify-content:space-between; }
+        .af-card-left { display:flex; align-items:center; gap:10px; }
+        .af-card-icon-wrap {
+          width:40px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+          background:var(--step-bg); border:1px solid var(--step-border); flex-shrink:0;
+          font-size:20px; transition:transform .22s;
+        }
+        .af-card:hover .af-card-icon-wrap { transform:scale(1.1) rotate(-4deg); }
+        .af-step-badge {
+          width:24px; height:24px; border-radius:50%; background:var(--step-color);
+          color:#fff; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;
+          font-family:var(--mono); flex-shrink:0; box-shadow:0 2px 8px var(--step-shadow);
+        }
+        .af-card-category-pill {
+          font-size:9px; font-weight:700; letter-spacing:.08em; padding:3px 8px;
+          border-radius:6px; font-family:var(--mono);
+          background:var(--step-bg); color:var(--step-color);
+        }
+
+        .af-card-title { font-size:14px; font-weight:800; color:#0f172a; line-height:1.3; }
+        .af-card-desc { font-size:12px; color:#64748b; line-height:1.6; flex:1; }
+        .af-card-footer { display:flex; align-items:center; justify-content:space-between; padding-top:8px; border-top:1px solid #f1f5f9; }
+        .af-card-tools-row { display:flex; gap:5px; flex-wrap:wrap; }
+        .af-card-tool { font-size:9px; font-weight:700; padding:2px 7px; border-radius:5px; font-family:var(--mono); background:var(--step-bg); color:var(--step-color); }
+        .af-card-cta { font-size:11px; font-weight:700; color:var(--step-color); opacity:0; transition:all .2s; transform:translateX(-4px); }
+        .af-card:hover .af-card-cta { opacity:1; transform:translateX(0); }
+
+        @media(max-width:700px){
+          .af-hero-inner { grid-template-columns:1fr; }
+          .af-hero-visual { display:none; }
+          .af-grid-wrap, .af-tools-inner { padding-left:16px; padding-right:16px; }
+          .af-cards-grid { grid-template-columns:1fr; }
+          .af-hero-stats { gap:16px; }
+        }
+  

@@ -1,7 +1,7 @@
 
 import './App.css'
 import { useState, useEffect, useRef, useCallback } from "react";
-
+import Api from './Api.jsx'
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const CONCEPTS = [
@@ -838,6 +838,7 @@ function NewsletterPage() {
 
   const navItems = [
     { id: "concepts", label: "Concepts" },
+    { id: "apiflow", label: "API Flow" },
     { id: "playbook", label: "Playbook" },
     { id: "newsletter", label: "Newsletter" },
     { id: "about", label: "About" },
@@ -863,6 +864,7 @@ function NewsletterPage() {
 
       {/* PAGE CONTENT */}
       {page === "concepts" && <ConceptsPage setSelected={setSelected} />}
+      {page === "apiflow" && <Api />}
       {page === "playbook" && <PlaybookPage />}
       {page === "newsletter" && <NewsletterPage />}
       {page === "about" && (
