@@ -90,7 +90,7 @@
         .hero-card-sub { font-size: 11px; color: var(--muted); }
 
         /* LIBRARY */
-        .library { max-width: 900px; margin: 0 auto; padding: 48px 32px; }
+        .library { max-width: 1000px; margin: 0 auto; padding: 48px 32px; }
         .section-title { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
         .section-desc { font-size: 14px; color: var(--muted); margin-bottom: 36px; max-width: 420px; }
         .section-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 36px; }

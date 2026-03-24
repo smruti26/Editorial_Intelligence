@@ -626,7 +626,7 @@ function ConceptsPage({ setSelected }) {
               <button className="btn-primary" onClick={() => document.getElementById("library").scrollIntoView({ behavior: "smooth" })}>
                 Explore Concepts →
               </button>
-              <button className="btn-outline">View Playbook</button>
+              
             </div>
           </div>
           <div className="hero-visual" style={{ transform: `translateY(${-heroOffset * 0.2}px)` }}>
