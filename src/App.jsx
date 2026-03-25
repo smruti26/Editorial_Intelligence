@@ -871,7 +871,7 @@ function NewsletterPage() {
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "64px 32px" }}>
           <div className="hero-badge">ABOUT</div>
           <h1 className="hero-title" style={{ marginBottom: 20 }}>About <span>Editorial Intelligence</span></h1>
-          <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.75, maxWidth: 580 }}>
+          <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.75, maxWidth: 580}} className='ht'>
             Editorial Intelligence is a practitioner-first knowledge platform designed for engineers who build systems at scale. Our mission: distil the hard-won wisdom of senior engineers into concise, actionable, and editorially rigorous content.
           </p>
         </div>

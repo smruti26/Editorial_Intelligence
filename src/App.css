@@ -305,6 +305,9 @@
           .library, .newsletter-section, .playbook-hero-content, .playbook-body, .newsletter-hero-content, .nl-hero-subscribe, .nl-archive { padding-left: 16px; padding-right: 16px; }
         }
 
+        .ht{
+          height: 50vh;
+        }
         /* API FLow CSS */
 
         /* ── AF PAGE WRAPPER ── */
